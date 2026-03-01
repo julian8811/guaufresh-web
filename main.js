@@ -25,19 +25,25 @@ class Cart {
     }
 
     bindEvents() {
+        console.log('Cart: Binding events...');
         // Global delegate for "Add to Cart" buttons
         document.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-add-to-cart]');
             if (btn) {
-                const product = {
-                    id: btn.dataset.id,
-                    name: btn.dataset.name,
-                    price: parseFloat(btn.dataset.price),
-                    image: btn.dataset.image,
-                    qty: 1
-                };
-                this.addItem(product);
-                this.showToast(`${product.name} añadido al carrito`);
+                console.log('Cart: Add button clicked!', btn.dataset);
+                try {
+                    const product = {
+                        id: btn.dataset.id,
+                        name: btn.dataset.name,
+                        price: parseFloat(btn.dataset.price),
+                        image: btn.dataset.image,
+                        qty: 1
+                    };
+                    this.addItem(product);
+                    this.showToast(`${product.name} añadido al carrito`);
+                } catch (err) {
+                    console.error('Cart Error:', err);
+                }
             }
         });
     }
