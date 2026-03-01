@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog de Consejos | Guaufresh</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "primary-dark": "#0fae0f",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-12">
+        <a class="flex items-center gap-3" href="index.html">
+            <span class="material-symbols-outlined text-primary text-3xl">pets</span>
+            <h2 class="text-xl font-bold">Guaufresh</h2>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="catalogo.html">Tienda</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors"
+                href="sobre-nosotros.html">Nosotros</a>
+            <a class="text-sm font-bold text-primary underline underline-offset-4" href="blog.html">Blog</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">
+        <div class="mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4">Blog de Consejos</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto">Cuidados naturales para que tu mejor amigo brille por fuera y
+                por dentro.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <article
+                class="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+                <a href="articulo.html" class="block aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRzqrkrLRNt_yOOeBS2FmRv5NMtQrmMEo7sejxB7yt8GVV_xHFSbkmqd_7mpUOV2hRehEuvETAiYWEstvxHq08S1XCEbrEjO-yfqPNEqUZekeG7AcFBMzzkEi8cFCLx3jJWnq6wR64Td3wMl9vnvLwFyTLgBz4p86KSLXe8PNFibnSta3Kn6blJdZL536SinOYA6dHbfO2J3fN1tMlq8rWnuuNBkiWQI1HL_iPSgyPVgreT1cT7nHzxcMfkueyE5DuxMVweV78sfw" />
+                </a>
+                <div class="p-6">
+                    <span class="text-primary font-bold uppercase text-[10px] tracking-widest mb-2 block">Higiene
+                        Natural</span>
+                    <h2 class="text-xl font-bold mb-4 leading-tight">Cómo elegir el champú vegano ideal</h2>
+                    <p class="text-slate-500 text-sm mb-6 line-clamp-3">Descubre por qué el pH neutro e ingredientes
+                        botánicos son clave para evitar alergias.</p>
+                    <a href="articulo.html" class="text-primary font-bold text-sm flex items-center gap-1">LEER MÁS
+                        <span class="material-symbols-outlined text-sm">east</span></a>
+                </div>
+            </article>
+            <!-- More articles... -->
+        </div>
+    </main>
+
+    <footer class="bg-slate-50 dark:bg-slate-950 py-12 text-center text-gray-500">
+        <p>© 2024 Guaufresh. Todos los derechos reservados.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

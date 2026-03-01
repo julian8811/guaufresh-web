@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nuestra Historia | Guaufresh</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "primary-dark": "#0fae0f",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 py-4 lg:px-12">
+        <a class="flex items-center gap-3" href="index.html">
+            <span class="material-symbols-outlined text-primary text-3xl">pets</span>
+            <h2 class="text-xl font-bold">Guaufresh</h2>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="catalogo.html">Tienda</a>
+            <a class="text-sm font-bold text-primary underline underline-offset-4"
+                href="sobre-nosotros.html">Nosotros</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="blog.html">Blog</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="relative px-4 py-8 lg:px-12">
+            <div class="relative flex min-h-[400px] flex-col items-center justify-center overflow-hidden rounded-3xl bg-cover bg-center text-center p-8"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3K2NuA1eJ3JIprMipZfFXqVMBuz3sX8CmZ8pXYD1aJlzh-0qxqtvxG5d8U8TbJu2qw8lnM6tneOtZX3bCwCFbF3lbTmC61hRYbfZ_FZCB4jddkToHFXPXU9vgaYfsUs3wTw4yXxvsIU99eVxbmQMcfWMRiuCKZoAyAipIPpmjZz4C6gc3lw7UjXjHs3z0W593hTyK-SiT21pXuBK6jdubsI5ie-Il7bxqfw9ykz-ev87k9XydOptO3yMhXDdCn66l4-Iu64t_07o');">
+                <h1 class="text-white text-5xl font-black mb-4">Nuestra Historia</h1>
+                <p class="text-white/90 text-lg max-w-2xl">Conoce a las personas y patitas detrás de la cosmética vegana
+                    más natural.</p>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="py-16 px-6 lg:px-12">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-extrabold mb-6">Bienestar Animal y Sostenibilidad</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-lg">Nuestra misión es cuidar a quienes más nos quieren
+                    sin comprometer el planeta.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">favorite</span>
+                    <h4 class="font-bold mb-2">Amor Animal</h4>
+                    <p class="text-sm text-slate-500">Son el centro de nuestra existencia.</p>
+                </div>
+                <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">nature</span>
+                    <h4 class="font-bold mb-2">Pura Botánica</h4>
+                    <p class="text-sm text-slate-500">Ingredientes 100% biodegradables.</p>
+                </div>
+                <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm text-center">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">visibility</span>
+                    <h4 class="font-bold mb-2">Transparencia</h4>
+                    <p class="text-sm text-slate-500">Sin letras pequeñas, solo honestidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-background-dark text-white/50 py-12 px-6 text-center">
+        <div class="flex items-center justify-center gap-2 text-white mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">pets</span>
+            <span class="font-bold">Guaufresh</span>
+        </div>
+        <p class="text-xs">© 2024 Guaufresh S.L. Hecho con amor vegetal.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

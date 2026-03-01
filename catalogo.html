@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Catálogo de Productos | Guaufresh</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "primary-dark": "#0fae0f",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                        "secondary": "#618961",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light text-[#111811] font-display min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-12">
+        <div class="flex items-center gap-8">
+            <a class="flex items-center gap-3 text-slate-900 dark:text-white hover:opacity-80 transition-opacity"
+                href="index.html">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-3xl">pets</span>
+                </div>
+                <h2 class="text-xl font-bold leading-tight tracking-tight">Guaufresh</h2>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-primary text-sm font-bold hover:text-primary transition-colors"
+                    href="catalogo.html">Tienda</a>
+                <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                    href="sobre-nosotros.html">Nosotros</a>
+                <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                    href="blog.html">Blog</a>
+                <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                    href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end items-center gap-4 md:gap-6">
+            <div class="flex items-center gap-2">
+                <a href="carrito.html"
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition-colors relative">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span
+                        class="cart-count-badge absolute top-1.5 right-1.5 size-4 bg-primary text-[10px] font-bold text-white flex items-center justify-center rounded-full"
+                        style="display:none">0</span>
+                </a>
+                <a href="perfil.html"
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 transition-colors">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 py-8">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 mb-8 text-sm">
+                <a class="text-secondary hover:text-primary" href="index.html">Inicio</a>
+                <span class="text-secondary/50">/</span>
+                <span class="font-semibold text-[#111811]">Tienda</span>
+            </div>
+
+            <div class="mb-10">
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight text-[#111811] mb-3">Nuestra Colección</h1>
+                <p class="text-secondary text-lg">Cuidado puro y vegano para tus peludos.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters -->
+                <aside class="w-full lg:w-64 flex-shrink-0 space-y-8">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-[#111811] mb-4">Tipo de Mascota</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input checked
+                                    class="h-5 w-5 border-2 border-secondary/30 text-primary focus:ring-primary"
+                                    name="animal" type="radio" />
+                                <span class="text-secondary group-hover:text-[#111811]">Todos</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="h-5 w-5 border-2 border-secondary/30 text-primary focus:ring-primary"
+                                    name="animal" type="radio" />
+                                <span class="text-secondary group-hover:text-[#111811]">Perros</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input class="h-5 w-5 border-2 border-secondary/30 text-primary focus:ring-primary"
+                                    name="animal" type="radio" />
+                                <span class="text-secondary group-hover:text-[#111811]">Gatos</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Grid -->
+                <div class="flex-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Product Card 1 -->
+                        <div
+                            class="group flex flex-col bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-secondary/10">
+                            <a href="producto.html" class="relative aspect-square overflow-hidden bg-background-light">
+                                <img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn0GGvsysrZGDjTwksiHCGgy_-P_eHtdN5zbqs_BKpifz7F1LLJ6gUn-wr_XhHjn0tOo82rCOixj3OxJQl1qll5JDZXWUmqpTmHcN71F1gJi0Gz2badX00L6HiWag8AyfL8A9PMJR0pY0QsCEM82TnyiHO3SFgDurIXCoxsIrPaW3F7yd8_cdIVRNVndFj8f5ouZP30OoR8eeCusxjV1vbvVNmQCDoH_BjQK4ZwWf9rg0Eq-8td-pjGa_-BFjpmegEyyeq31rkU8E" />
+                            </a>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <h3 class="text-lg font-bold text-[#111811] mb-1 group-hover:text-primary">Champú de
+                                    Avena Vegano</h3>
+                                <p class="text-secondary text-sm mb-4 line-clamp-2">Fórmula suave para pieles sensibles.
+                                </p>
+                                <div class="mt-auto flex items-center justify-between">
+                                    <span class="text-lg font-black text-[#111811]">18.00€</span>
+                                    <button
+                                        class="bg-primary hover:bg-primary-dark text-slate-900 font-bold p-2 rounded-lg transition-colors">
+                                        <span class="material-symbols-outlined">add_shopping_cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More products can be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#111811] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-10 text-center">
+            <p>© 2024 Guaufresh. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

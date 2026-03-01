@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cómo elegir el champú vegano ideal | Guaufresh Blog</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec13",
+                        "primary-dark": "#0fae0f",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102210",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-12">
+        <a class="flex items-center gap-3" href="index.html">
+            <span class="material-symbols-outlined text-primary text-3xl">pets</span>
+            <h2 class="text-xl font-bold">Guaufresh</h2>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="catalogo.html">Tienda</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors"
+                href="sobre-nosotros.html">Nosotros</a>
+            <a class="text-sm font-bold text-primary underline underline-offset-4" href="blog.html">Blog</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
+        <article>
+            <span class="text-primary font-bold uppercase text-xs tracking-widest mb-4 block text-center">Higiene
+                Natural</span>
+            <h1 class="text-4xl md:text-5xl font-black mb-8 text-center leading-tight">Cómo elegir el champú vegano
+                ideal para la piel de tu perro</h1>
+
+            <div class="aspect-video rounded-3xl overflow-hidden mb-12 shadow-xl">
+                <img class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRzqrkrLRNt_yOOeBS2FmRv5NMtQrmMEo7sejxB7yt8GVV_xHFSbkmqd_7mpUOV2hRehEuvETAiYWEstvxHq08S1XCEbrEjO-yfqPNEqUZekeG7AcFBMzzkEi8cFCLx3jJWnq6wR64Td3wMl9vnvLwFyTLgBz4p86KSLXe8PNFibnSta3Kn6blJdZL536SinOYA6dHbfO2J3fN1tMlq8rWnuuNBkiWQI1HL_iPSgyPVgreT1cT7nHzxcMfkueyE5DuxMVweV78sfw" />
+            </div>
+
+            <div class="prose prose-slate dark:prose-invert max-w-none text-lg leading-relaxed space-y-6">
+                <p>La piel de nuestras mascotas es mucho más sensible que la nuestra. Descubre por qué el pH neutro y
+                    los ingredientes botánicos son clave para evitar alergias y dermatitis.</p>
+                <p>Al elegir un champú, busca siempre certificaciones que avalen su origen vegetal. Ingredientes como la
+                    avena, el aloe vera y el coco son excelentes aliados para mantener un pelaje sano sin irritar la
+                    piel.</p>
+                <h2 class="text-2xl font-bold mt-10">Beneficios de la cosmética natural</h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>pH balanceado específicamente para mascotas.</li>
+                    <li>Libre de parabenos y sulfatos agresivos.</li>
+                    <li>Ayuda a reducir el picor y la sequedad.</li>
+                    <li>Respetuoso con el medio ambiente.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-slate-50 dark:bg-slate-950 py-12 text-center text-gray-500">
+        <p>© 2024 Guaufresh. Todos los derechos reservados.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
