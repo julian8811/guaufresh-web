@@ -1,21 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 :root {
-    --primary: #13ec13;
-    --primary-dark: #0fae0f;
-    --background-light: #f6f8f6;
-    --background-dark: #102210;
-    --secondary: #618961;
-    --slate-900: #0f172a;
-    --slate-600: #475569;
-    --slate-400: #94a3b8;
-    --slate-200: #e2e8f0;
+    /* Official Brand Colors from Manual */
+    --primary: #00A79F;
+    /* Teal */
+    --primary-dark: #008982;
+    /* Darker Teal */
+    --background-light: #f6fdfd;
+    /* Pale Teal Tint */
+    --background-dark: #004441;
+    /* Deep Teal */
+    --secondary: #35BB9B;
+    /* Seafoam */
+    --accent: #F9F871;
+    /* Yellow */
+    --slate-900: #002b28;
+    /* Deep Teal variant */
+    --slate-600: #666666;
+    /* Manual Grey */
+    --slate-400: #90DE85;
+    /* Manual Light Green */
+    --slate-200: #C3ED79;
+    /* Manual Lime Green */
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Alice', serif;
 }
 
 .material-symbols-outlined {
@@ -23,9 +45,17 @@ body {
 }
 
 /* Custom Utilities */
-.bg-primary { background-color: var(--primary); }
-.text-primary { color: var(--primary); }
-.border-primary { border-color: var(--primary); }
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.border-primary {
+    border-color: var(--primary);
+}
 
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
@@ -36,6 +66,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
